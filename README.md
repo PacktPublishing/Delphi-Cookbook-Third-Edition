@@ -39,15 +39,9 @@ end
 ```
 
 **Following is what you need for this book:**
-This book aims to help professional Delphi developers in their day-to-day job. This book
-will teach you about the newest Delphi technologies and its hidden gems. It is not a book
-for a newbie, but the practical approach will help you reach a new level with your Delphi
-skills. The experienced developer can benefit from this book, because non-trivial problems
-are solved using best practices. Where more than one way is available or the topic is too
-broad to be explained in the available pages, references are provided to allow you to go
-deeper into that field. It is a book to have on your desk for the next few years.
+This book aims to help professional Delphi developers in their day-to-day job. This book will teach you about the newest Delphi technologies and its hidden gems. It is not a book for a newbie, but the practical approach will help you reach a new level with your Delphi skills. The experienced developer can benefit from this book, because non-trivial problems are solved using best practices. Where more than one way is available or the topic is too broad to be explained in the available pages, references are provided to allow you to go deeper into that field. It is a book to have on your desk for the next few years.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-7).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
