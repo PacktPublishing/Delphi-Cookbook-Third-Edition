@@ -52,9 +52,9 @@ With the following software and hardware list you can run all code files present
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/DelphiCookbookThirdEdition_ColorImages.pdf).
 
 ### Related products
-* Delphi High Performance [[Packt]](https://www.packtpub.com/application-development/delphi-high-performance?utm_source=github&utm_medium=repository&utm_campaign=9781788625456) [[Amazon]](https://www.amazon.com/dp/1-788-62545-5)
+* Delphi High Performance [[Packt]](https://www.packtpub.com/application-development/delphi-high-performance?utm_source=github&utm_medium=repository&utm_campaign=9781788625456) [[Amazon]](https://www.amazon.com/dp/1788625455)
 
-* Expert Delphi [[Packt]](https://www.packtpub.com/application-development/expert-delphi?utm_source=github&utm_medium=repository&utm_campaign=9781786460165) [[Amazon]](https://www.amazon.com/dp/1-786-46016-5)
+* Expert Delphi [[Packt]](https://www.packtpub.com/application-development/expert-delphi?utm_source=github&utm_medium=repository&utm_campaign=9781786460165) [[Amazon]](https://www.amazon.com/dp/1786460165)
 
 ## Get to Know the Authors
 **Daniele Spinetti**
