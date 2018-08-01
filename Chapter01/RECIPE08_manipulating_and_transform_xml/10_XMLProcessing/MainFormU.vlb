@@ -1,0 +1,15 @@
+﻿[btnGenerateXML]
+Coordinates=186,10,112,58
+
+[XMLDocument1]
+Coordinates=265,1,106,36
+
+[btnParseXML]
+Coordinates=84,10,92,58
+
+[btnModifyXML]
+Coordinates=10,78,96,58
+
+[Memo1]
+Coordinates=10,10,64,58
+

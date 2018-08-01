@@ -1,0 +1,3 @@
+﻿00.18.31.983 [ EXCEPTION 01184] [EIBNativeException] [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3054".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  (Custom message: "Global Action Exception Handler")
+00.19.14.247 [ EXCEPTION 15060] [EIBNativeException] [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3054".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  (Custom message: "Global Action Exception Handler")
+00.20.46.598 [ EXCEPTION 15116] [Exception] Invalid search parameters (Custom message: "Global Action Exception Handler")

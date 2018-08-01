@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{087F0069-F4F1-4323-B36E-8441066C09B0}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\PeopleManagerServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client\PeopleManagerClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PeopleManagerServer">
+        <MSBuild Projects="Server\PeopleManagerServer.dproj"/>
+    </Target>
+    <Target Name="PeopleManagerServer:Clean">
+        <MSBuild Projects="Server\PeopleManagerServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleManagerServer:Make">
+        <MSBuild Projects="Server\PeopleManagerServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PeopleManagerClient">
+        <MSBuild Projects="Client\PeopleManagerClient.dproj"/>
+    </Target>
+    <Target Name="PeopleManagerClient:Clean">
+        <MSBuild Projects="Client\PeopleManagerClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleManagerClient:Make">
+        <MSBuild Projects="Client\PeopleManagerClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PeopleManagerServer;PeopleManagerClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PeopleManagerServer:Clean;PeopleManagerClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PeopleManagerServer:Make;PeopleManagerClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars>
+  <car>
+    <name>360 Modena</name>
+    <manufacturer>Ferrari</manufacturer>
+    <price currency="EUR">150,000</price>
+  </car>
+  <car>
+    <name>Mustang</name>
+    <manufacturer>Ford</manufacturer>
+    <price currency="USD">75,000</price>
+  </car>
+  <car>
+    <name>Countach</name>
+    <manufacturer>Lamborghini</manufacturer>
+    <price currency="EUR">110,000</price>
+    </car>
+  <car>
+    <name>Corvette</name>
+    <manufacturer>Chevrolet</manufacturer>
+    <price currency="USD">80,000</price>
+  </car>
+</cars>

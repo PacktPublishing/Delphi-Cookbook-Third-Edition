@@ -1,0 +1,54 @@
+﻿00.00.38.233 [           08524] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.02.22.782 [           10908] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.02.23.643 [           06768] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.02.31.961 [           02000] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.02.38.939 [           01788] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.06.29.738 [ EXCEPTION 04532] [Exception] Invalid search parameters (Custom message: "Global Action Exception Handler")
+00.06.29.738 [           04532] GET:/people/searches -> PeopleControllerU.TPeopleController - 500 Invalid search parameters [Exception]
+00.06.33.818 [ EXCEPTION 11072] [EIBNativeException] [FireDAC][Phys][IB]arithmetic exception, numeric overflow, or string truncation;Cannot transliterate character between character sets (Custom message: "Global Action Exception Handler")
+00.06.33.819 [           11072] GET:/people/searches -> PeopleControllerU.TPeopleController - 500 [FireDAC][Phys][IB]arithmetic exception, numeric overflow, or string truncation;Cannot transliterate character between character sets [EIBNativeException]
+00.11.01.287 [ EXCEPTION 07488] [Exception] Invalid search parameters (Custom message: "Global Action Exception Handler")
+00.11.01.287 [           07488] GET:/people/searches -> PeopleControllerU.TPeopleController - 500 Invalid search parameters [Exception]
+00.11.04.406 [           09928] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.11.37.846 [           04860] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.13.43.678 [           08688] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.17.16.329 [           06692] ENTER: Config default values
+00.17.16.333 [           06692] EXIT: Config default values
+00.17.16.334 [           06692] ENTER: LoadSystemControllers
+00.17.16.334 [           06692] EXIT: LoadSystemControllers
+00.17.19.596 [           06692] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.18.20.195 [           09928] ENTER: Config default values
+00.18.20.195 [           09928] EXIT: Config default values
+00.18.20.199 [           09928] ENTER: LoadSystemControllers
+00.18.20.199 [           09928] EXIT: LoadSystemControllers
+00.18.36.760 [           09928] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.21.06.678 [           07140] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.22.03.139 [           02156] ENTER: Config default values
+00.22.03.144 [           02156] EXIT: Config default values
+00.22.03.144 [           02156] ENTER: LoadSystemControllers
+00.22.03.144 [           02156] EXIT: LoadSystemControllers
+00.22.03.202 [           02156] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.22.37.958 [           05708] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.22.42.087 [           01156] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+00.22.53.044 [           07936] GET:/people/565/photo -> PeopleControllerU.TPeopleController - 200 OK
+00.23.04.653 [           03944] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.25.12.857 [           09104] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.25.17.400 [           08836] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.25.39.685 [           10852] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.25.42.410 [           10864] GET:/people/565/photo -> PeopleControllerU.TPeopleController - 200 OK
+19.56.33.372 [           06416] ENTER: Config default values
+19.56.33.373 [           06416] EXIT: Config default values
+19.56.33.373 [           06416] ENTER: LoadSystemControllers
+19.56.33.373 [           06416] EXIT: LoadSystemControllers
+19.56.33.516 [           06416] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+19.56.42.629 [           05096] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+19.56.47.668 [           09040] GET:/people/500 -> PeopleControllerU.TPeopleController - 200 OK
+19.58.29.116 [           11536] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+20.01.46.884 [           12196] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+20.06.23.388 [           03432] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+20.15.10.474 [           12200] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+20.15.17.533 [ EXCEPTION 11760] [EMVCException] Person not found (Custom message: "")
+20.15.17.533 [           11760] GET:/people/5004/photo -> PeopleControllerU.TPeopleController - 404 Person not found [EMVCException]
+20.16.38.970 [           07488] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+20.34.16.034 [           07312] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+20.34.16.946 [           11352] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 

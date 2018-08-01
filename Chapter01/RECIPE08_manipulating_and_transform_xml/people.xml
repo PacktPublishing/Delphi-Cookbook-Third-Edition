@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<people>
+	<group type="friend">
+		<person title="Mr">
+			<firstname>Stephan</firstname>
+			<lastname>Seraph</lastname>
+		</person>
+
+		<person title="Mr">
+			<firstname>Gabriel</firstname>
+			<lastname>Bryn</lastname>
+		</person>
+
+		<person title="Mr">
+			<firstname>Fabrizio</firstname>
+			<lastname>Beatty</lastname>
+		</person>
+	</group>
+
+	<group type="family">
+		<person>
+			<firstname>Debbie</firstname>
+			<lastname>Teti</lastname>
+		</person>
+
+		<person>
+			<firstname>Matthew</firstname>
+			<lastname>Teti</lastname>
+		</person>
+	</group>
+
+	<group type="colleague">
+		<person title="Mr">
+			<firstname>Luke</firstname>
+			<lastname>Smith</lastname>
+		</person>
+	</group>
+</people>

@@ -1,0 +1,7 @@
+﻿11.32.27.698 [           09664] ENTER: Config default values
+11.32.27.700 [           09664] EXIT: Config default values
+11.32.27.700 [           09664] ENTER: LoadSystemControllers
+11.32.27.700 [           09664] EXIT: LoadSystemControllers
+11.32.27.701 [           09664] GET:/system/describeserver.info -> MVCFramework.SysControllers.TMVCSystemController - 200 OK
+11.32.27.753 [           08264] GET:/favicon.ico -> NO ACTION  - 404 Not Found
+11.32.54.554 [           15548] GET:/system/describeserver.info -> MVCFramework.SysControllers.TMVCSystemController - 200 OK

@@ -1,0 +1,8 @@
+CalculationCustomer_CityMall.TCalculationCustomer_CityMall
+CalculationCustomer_Spark.TCalculationCustomer_Spark
+CalculationCustomer_CountryRoad.TCalculationCustomer_CountryRoad
+
+
+WARNING!
+Put the engine that you want to use as the first line of this file.
+Delete (or rename) this file if you want to use the default engine

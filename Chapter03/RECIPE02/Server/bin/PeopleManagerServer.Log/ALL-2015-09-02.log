@@ -1,0 +1,12 @@
+﻿11.39.20.802 [           01820] ENTER: Config default values
+11.39.20.803 [           01820] EXIT: Config default values
+11.39.20.803 [           01820] ENTER: LoadSystemControllers
+11.39.20.803 [           01820] EXIT: LoadSystemControllers
+11.39.22.884 [ EXCEPTION 01820] [EIBNativeException] [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3050".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  (Custom message: "Global Action Exception Handler")
+11.39.22.885 [           01820] GET:/people -> PeopleControllerU.TPeopleController - 500 [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3050".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  [EIBNativeException]
+11.39.48.053 [           05780] GET:/people -> PeopleControllerU.TPeopleController - 200 OK
+11.40.05.674 [           05692] GET:/people/505 -> PeopleControllerU.TPeopleController - 200 OK
+11.40.09.875 [           02596] PUT:/people/505 -> PeopleControllerU.TPeopleController - 200 Person updated
+11.40.12.818 [           03940] GET:/people -> PeopleControllerU.TPeopleController - 200 OK
+11.40.16.670 [           16536] PUT:/people/505 -> PeopleControllerU.TPeopleController - 200 Person updated
+11.40.19.610 [           15752] GET:/people -> PeopleControllerU.TPeopleController - 200 OK

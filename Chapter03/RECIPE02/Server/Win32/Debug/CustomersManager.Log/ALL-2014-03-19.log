@@ -1,0 +1,6 @@
+﻿16.57.54.279 [           08360] >> /customers
+16.57.54.286 [           08360] GET:/customers -> CustomersControllerU.TCustomerController
+16.57.59.530 [ EXCEPTION 08360] [EIBNativeException] [FireDAC][Phys][IB]connection rejected by remote interface (Custom message: "")
+16.57.59.533 [           08360] << /customers
+16.57.59.640 [           07620] >> /favicon.ico
+16.57.59.640 [           07620] << /favicon.ico

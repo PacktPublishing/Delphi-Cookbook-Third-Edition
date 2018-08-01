@@ -1,0 +1,27 @@
+﻿15.42.19.813 [           10824] ENTER: Config default values
+15.42.19.814 [           10824] EXIT: Config default values
+15.42.19.814 [           10824] ENTER: LoadSystemControllers
+15.42.19.814 [           10824] EXIT: LoadSystemControllers
+15.42.19.956 [           10824] GET:/people -> PeopleControllerU.TPeopleController - 200 OK
+15.42.31.587 [           02624] GET:/people/500 -> PeopleControllerU.TPeopleController - 200 OK
+15.42.37.989 [           16996] PUT:/people/500 -> PeopleControllerU.TPeopleController - 200 Person updated
+15.44.05.203 [           14228] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+15.44.17.395 [           12172] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+15.44.21.485 [           09632] GET:/people/501/photo -> PeopleControllerU.TPeopleController - 200 OK
+15.44.29.678 [ EXCEPTION 02508] [EMVCException] Person not found (Custom message: "")
+15.44.29.678 [           02508] GET:/people/51/photo -> PeopleControllerU.TPeopleController - 404 Person not found [EMVCException]
+15.44.34.077 [           11132] GET:/people/501/photo -> PeopleControllerU.TPeopleController - 200 OK
+15.44.37.246 [ EXCEPTION 10164] [EMVCException] Person not found (Custom message: "")
+15.44.37.246 [           10164] GET:/people/502/photo -> PeopleControllerU.TPeopleController - 404 Person not found [EMVCException]
+15.44.42.154 [           16332] GET:/people/505/photo -> PeopleControllerU.TPeopleController - 200 OK
+17.16.26.210 [           07320] ENTER: Config default values
+17.16.26.213 [           07320] EXIT: Config default values
+17.16.26.214 [           07320] ENTER: LoadSystemControllers
+17.16.26.214 [           07320] EXIT: LoadSystemControllers
+17.16.26.278 [           07320] GET:/people -> PeopleControllerU.TPeopleController - 200 OK
+17.16.33.976 [           16860] PUT:/people/565 -> PeopleControllerU.TPeopleController - 200 Person updated
+17.16.41.567 [           17144] GET:/people/506 -> PeopleControllerU.TPeopleController - 200 OK
+17.16.44.445 [           07536] PUT:/people/506 -> PeopleControllerU.TPeopleController - 200 Person updated
+17.16.47.096 [           08160] PUT:/people/506 -> PeopleControllerU.TPeopleController - 200 Person updated
+17.17.54.252 [           12512] GET:/people -> PeopleControllerU.TPeopleController - 200 OK
+17.21.10.680 [           08504] GET:/people -> PeopleControllerU.TPeopleController - 200 OK

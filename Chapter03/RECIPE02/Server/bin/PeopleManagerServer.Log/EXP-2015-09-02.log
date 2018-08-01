@@ -1,0 +1,1 @@
+﻿11.39.22.883 [ EXCEPTION 01820] [EIBNativeException] [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3050".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  (Custom message: "Global Action Exception Handler")

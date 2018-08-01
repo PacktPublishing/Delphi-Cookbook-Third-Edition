@@ -1,0 +1,13 @@
+﻿17.02.56.645 [           10400] ENTER: Config default values
+17.02.56.647 [           10400] EXIT: Config default values
+17.02.56.647 [           10400] ENTER: LoadSystemControllers
+17.02.56.647 [           10400] EXIT: LoadSystemControllers
+17.02.56.757 [           10400] GET:/people -> PeopleControllerU.TPeopleController - 200 OK
+17.03.43.764 [           11536] ENTER: Config default values
+17.03.43.764 [           11536] EXIT: Config default values
+17.03.43.764 [           11536] ENTER: LoadSystemControllers
+17.03.43.764 [           11536] EXIT: LoadSystemControllers
+17.03.43.795 [           11536] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+17.03.53.151 [           05660] GET:/people -> PeopleControllerU.TPeopleController - 200 OK
+17.03.58.198 [           12428] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+17.04.01.884 [           14280] GET:/people/501/photo -> PeopleControllerU.TPeopleController - 200 OK

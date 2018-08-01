@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FDBS Version="9">
+  <Manager UpdatesRegistry="True">
+    <TableList>
+      <Table Name="FDMemTable1" TabID="0" EnforceConstraints="False" MinimumCapacity="50" CheckNotNull="False">
+        <ColumnList>
+          <Column Name="EmpNo" SourceID="1" DataType="Int32" Searchable="True" AllowNull="True" Base="True" OAllowNull="True" OInUpdate="True" OInWhere="True" OriginColName="EmpNo"/>
+          <Column Name="FirstName" SourceID="2" DataType="AnsiString" Size="30" Searchable="True" AllowNull="True" Base="True" OAllowNull="True" OInUpdate="True" OInWhere="True" OriginColName="FirstName" SourceSize="30"/>
+          <Column Name="LastName" SourceID="3" DataType="AnsiString" Size="30" Searchable="True" AllowNull="True" Base="True" OAllowNull="True" OInUpdate="True" OInWhere="True" OriginColName="LastName" SourceSize="30"/>
+          <Column Name="DOB" SourceID="4" DataType="Date" Searchable="True" AllowNull="True" Base="True" OAllowNull="True" OInUpdate="True" OInWhere="True" OriginColName="DOB"/>
+        </ColumnList>
+        <ConstraintList Enforce="False"/>
+        <ViewList/>
+        <TableRowList>
+          <Row RowID="0" RowState="Unchanged">
+            <Original EmpNo="7583" FirstName="Joseph" LastName="JOHNSON" DOB="19761026"/>
+          </Row>
+          <Row RowID="1" RowState="Unchanged">
+            <Original EmpNo="7859" FirstName="Daniele" LastName="Wilson" DOB="19900716"/>
+          </Row>
+          <Row RowID="2" RowState="Unchanged">
+            <Original EmpNo="1574" FirstName="Mattia" LastName="Jones" DOB="19711008"/>
+          </Row>
+          <Row RowID="3" RowState="Unchanged">
+            <Original EmpNo="3030" FirstName="Thomas" LastName="Brown" DOB="19800129"/>
+          </Row>
+          <Row RowID="4" RowState="Unchanged">
+            <Original EmpNo="2961" FirstName="Mattia" LastName="Miller" DOB="19920712"/>
+          </Row>
+          <Row RowID="5" RowState="Unchanged">
+            <Original EmpNo="1649" FirstName="Debora" LastName="Smith" DOB="19830925"/>
+          </Row>
+          <Row RowID="6" RowState="Unchanged">
+            <Original EmpNo="9448" FirstName="Debora" LastName="Williams" DOB="19911028"/>
+          </Row>
+          <Row RowID="7" RowState="Unchanged">
+            <Original EmpNo="6158" FirstName="William" LastName="Wilson" DOB="19741106"/>
+          </Row>
+          <Row RowID="8" RowState="Unchanged">
+            <Original EmpNo="5904" FirstName="Jack" LastName="Wilson" DOB="19800922"/>
+          </Row>
+          <Row RowID="9" RowState="Unchanged">
+            <Original EmpNo="7454" FirstName="Thomas" LastName="Miller" DOB="19830805"/>
+          </Row>
+          <Row RowID="10" RowState="Unchanged">
+            <Original EmpNo="8144" FirstName="Thomas" LastName="Brown" DOB="19780210"/>
+          </Row>
+          <Row RowID="11" RowState="Unchanged">
+            <Original EmpNo="9829" FirstName="Thomas" LastName="Wilson" DOB="19711228"/>
+          </Row>
+          <Row RowID="12" RowState="Unchanged">
+            <Original EmpNo="1534" FirstName="James" LastName="Smith" DOB="19890324"/>
+          </Row>
+          <Row RowID="13" RowState="Unchanged">
+            <Original EmpNo="4730" FirstName="Daniele" LastName="Williams" DOB="19840604"/>
+          </Row>
+          <Row RowID="14" RowState="Unchanged">
+            <Original EmpNo="8400" FirstName="Thomas" LastName="Jones" DOB="19851214"/>
+          </Row>
+          <Row RowID="15" RowState="Unchanged">
+            <Original EmpNo="1324" FirstName="Jack" LastName="Williams" DOB="19710518"/>
+          </Row>
+          <Row RowID="16" RowState="Unchanged">
+            <Original EmpNo="5252" FirstName="Joseph" LastName="Smith" DOB="19701130"/>
+          </Row>
+          <Row RowID="17" RowState="Unchanged">
+            <Original EmpNo="5882" FirstName="Mattia" LastName="Anderson" DOB="19700917"/>
+          </Row>
+          <Row RowID="18" RowState="Unchanged">
+            <Original EmpNo="4825" FirstName="Debora" LastName="JOHNSON" DOB="19880721"/>
+          </Row>
+          <Row RowID="19" RowState="Unchanged">
+            <Original EmpNo="3969" FirstName="Debora" LastName="Williams" DOB="19890804"/>
+          </Row>
+        </TableRowList>
+      </Table>
+    </TableList>
+    <RelationList/>
+    <UpdatesJournal SavePoint="20"/>
+  </Manager>
+</FDBS>

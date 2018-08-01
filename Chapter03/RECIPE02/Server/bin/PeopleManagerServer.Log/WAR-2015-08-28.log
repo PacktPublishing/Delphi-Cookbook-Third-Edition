@@ -1,0 +1,4 @@
+﻿00.06.29.728 [ EXCEPTION 04532] [Exception] Invalid search parameters (Custom message: "Global Action Exception Handler")
+00.06.33.818 [ EXCEPTION 11072] [EIBNativeException] [FireDAC][Phys][IB]arithmetic exception, numeric overflow, or string truncation;Cannot transliterate character between character sets (Custom message: "Global Action Exception Handler")
+00.11.01.287 [ EXCEPTION 07488] [Exception] Invalid search parameters (Custom message: "Global Action Exception Handler")
+20.15.17.533 [ EXCEPTION 11760] [EMVCException] Person not found (Custom message: "")

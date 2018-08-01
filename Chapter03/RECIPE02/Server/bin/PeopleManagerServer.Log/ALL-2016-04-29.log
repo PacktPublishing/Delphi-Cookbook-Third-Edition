@@ -1,0 +1,17 @@
+﻿00.18.29.915 [           01184] ENTER: Config default values
+00.18.29.916 [           01184] EXIT: Config default values
+00.18.29.916 [           01184] ENTER: LoadSystemControllers
+00.18.29.916 [           01184] EXIT: LoadSystemControllers
+00.18.31.984 [ EXCEPTION 01184] [EIBNativeException] [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3054".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  (Custom message: "Global Action Exception Handler")
+00.18.31.984 [           01184] GET:/people -> PeopleControllerU.TPeopleController - 500 [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3054".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  [EIBNativeException]
+00.19.14.247 [ EXCEPTION 15060] [EIBNativeException] [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3054".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  (Custom message: "Global Action Exception Handler")
+00.19.14.248 [           15060] GET:/people -> PeopleControllerU.TPeopleController - 500 [FireDAC][Phys][IB]Unable to complete network request to host "localhost/3054".;Failed to establish a connection.;Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.  [EIBNativeException]
+00.20.46.514 [           15116] ENTER: Config default values
+00.20.46.514 [           15116] EXIT: Config default values
+00.20.46.514 [           15116] ENTER: LoadSystemControllers
+00.20.46.514 [           15116] EXIT: LoadSystemControllers
+00.20.46.601 [ EXCEPTION 15116] [Exception] Invalid search parameters (Custom message: "Global Action Exception Handler")
+00.20.46.601 [           15116] GET:/people/searches -> PeopleControllerU.TPeopleController - 500 Invalid search parameters [Exception]
+00.20.50.173 [           21048] GET:/people/searches -> PeopleControllerU.TPeopleController - 200 
+00.20.53.822 [           17660] GET:/people/500/photo -> PeopleControllerU.TPeopleController - 200 OK
+00.20.57.199 [           11628] GET:/people/501/photo -> PeopleControllerU.TPeopleController - 200 OK
