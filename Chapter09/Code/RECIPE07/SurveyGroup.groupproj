@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{59BE7A98-B426-4F2F-B419-4ED2B973F338}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SurveyApp\MySurveyApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SurveyService\MySurveyService.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SurveyWebService\SurveyWebService.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MySurveyApp">
+        <MSBuild Projects="SurveyApp\MySurveyApp.dproj"/>
+    </Target>
+    <Target Name="MySurveyApp:Clean">
+        <MSBuild Projects="SurveyApp\MySurveyApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MySurveyApp:Make">
+        <MSBuild Projects="SurveyApp\MySurveyApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MySurveyService">
+        <MSBuild Projects="SurveyService\MySurveyService.dproj"/>
+    </Target>
+    <Target Name="MySurveyService:Clean">
+        <MSBuild Projects="SurveyService\MySurveyService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MySurveyService:Make">
+        <MSBuild Projects="SurveyService\MySurveyService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SurveyWebService">
+        <MSBuild Projects="SurveyWebService\SurveyWebService.dproj"/>
+    </Target>
+    <Target Name="SurveyWebService:Clean">
+        <MSBuild Projects="SurveyWebService\SurveyWebService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SurveyWebService:Make">
+        <MSBuild Projects="SurveyWebService\SurveyWebService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MySurveyApp;MySurveyService;SurveyWebService"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MySurveyApp:Clean;MySurveyService:Clean;SurveyWebService:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MySurveyApp:Make;MySurveyService:Make;SurveyWebService:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

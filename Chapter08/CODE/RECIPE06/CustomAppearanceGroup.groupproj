@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E2FA4039-52F5-42D4-A4E3-F2DCF316680B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DelphiCookbookListViewAppearance\DelphiCookbookListViewAppearance.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WeatherForecastExCustomAppearance\WeatherForecastCustomAppearance.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DelphiCookbookListViewAppearance">
+        <MSBuild Projects="DelphiCookbookListViewAppearance\DelphiCookbookListViewAppearance.dproj"/>
+    </Target>
+    <Target Name="DelphiCookbookListViewAppearance:Clean">
+        <MSBuild Projects="DelphiCookbookListViewAppearance\DelphiCookbookListViewAppearance.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DelphiCookbookListViewAppearance:Make">
+        <MSBuild Projects="DelphiCookbookListViewAppearance\DelphiCookbookListViewAppearance.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WeatherForecastCustomAppearance">
+        <MSBuild Projects="WeatherForecastExCustomAppearance\WeatherForecastCustomAppearance.dproj"/>
+    </Target>
+    <Target Name="WeatherForecastCustomAppearance:Clean">
+        <MSBuild Projects="WeatherForecastExCustomAppearance\WeatherForecastCustomAppearance.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WeatherForecastCustomAppearance:Make">
+        <MSBuild Projects="WeatherForecastExCustomAppearance\WeatherForecastCustomAppearance.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DelphiCookbookListViewAppearance;WeatherForecastCustomAppearance"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DelphiCookbookListViewAppearance:Clean;WeatherForecastCustomAppearance:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DelphiCookbookListViewAppearance:Make;WeatherForecastCustomAppearance:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

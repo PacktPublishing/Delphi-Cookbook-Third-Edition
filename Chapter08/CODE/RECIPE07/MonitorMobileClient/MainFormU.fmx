@@ -1,0 +1,63 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Monitor System'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object Image1: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Size.Width = 374.000000000000000000
+    Size.Height = 508.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object CameraComponent1: TCameraComponent
+    OnSampleBufferReady = CameraComponent1SampleBufferReady
+    Left = 64
+    Top = 80
+  end
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 384.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 384.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Monitoring System'
+      object Button1: TButton
+        Align = FitRight
+        Position.X = 311.000000000000000000
+        Size.Width = 73.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Button1'
+        ParentShowHint = False
+        ShowHint = True
+        OnClick = Button1Click
+      end
+    end
+  end
+  object LocationSensor1: TLocationSensor
+    OnLocationChanged = LocationSensor1LocationChanged
+    Left = 184
+    Top = 80
+  end
+end

@@ -1,0 +1,223 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Sending Intents'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Sending Intents'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Align = Top
+    Margins.Top = 40.000000000000000000
+    Position.Y = 249.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'StartActivityForResult'
+  end
+  object Label2: TLabel
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.Y = 58.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'StartActivity'
+  end
+  object ListBox1: TListBox
+    Align = Top
+    Margins.Top = 5.000000000000000000
+    Position.Y = 364.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = 'listboxitemnodetail'
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 384.000000000000000000
+    Viewport.Height = 200.000000000000000000
+  end
+  object btnSTT: TButton
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 5.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 282.000000000000000000
+    Size.Width = 364.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Speech To Text'
+    OnClick = btnSTTClick
+  end
+  object GridPanelLayout1: TGridPanelLayout
+    Align = Top
+    Margins.Top = 10.000000000000000000
+    Position.Y = 91.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 118.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    ColumnCollection = <
+      item
+        Value = 50.000000000000000000
+      end
+      item
+        Value = 50.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = btnWebSite
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = btnMaps
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = btnEmailEx
+        Row = 2
+      end
+      item
+        Column = 1
+        Control = btnTwitter
+        Row = 1
+      end
+      item
+        Column = 0
+        Control = btnEmail
+        Row = 1
+      end>
+    RowCollection = <
+      item
+        Value = 33.355088169561360000
+      end
+      item
+        Value = 33.317236446312170000
+      end
+      item
+        Value = 33.327675384126470000
+      end>
+    object btnWebSite: TButton
+      Anchors = []
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 31.000000000000000000
+      Position.Y = 3.669059753417969000
+      Size.Width = 130.000000000000000000
+      Size.Height = 32.020885467529300000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'Web Site'
+      OnClick = btnWebSiteClick
+    end
+    object btnMaps: TButton
+      Anchors = []
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 223.000000000000000000
+      Position.Y = 3.669059753417969000
+      Size.Width = 130.000000000000000000
+      Size.Height = 32.020885467529300000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Maps'
+      OnClick = btnMapsClick
+    end
+    object btnEmailEx: TButton
+      Anchors = []
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 31.000000000000000000
+      Position.Y = 82.336669921875000000
+      Size.Width = 130.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Email Ex'
+      OnClick = btnEmailExClick
+    end
+    object btnTwitter: TButton
+      Anchors = []
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 223.000000000000000000
+      Position.Y = 43.016174316406250000
+      Size.Width = 130.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Twitter'
+      OnClick = btnTwitterClick
+    end
+    object btnEmail: TButton
+      Anchors = []
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 31.000000000000000000
+      Position.Y = 43.016174316406250000
+      Size.Width = 130.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Email'
+      OnClick = btnEmailClick
+    end
+  end
+  object Label3: TLabel
+    Align = Top
+    StyledSettings = [Family, Style, FontColor]
+    Margins.Top = 5.000000000000000000
+    Position.Y = 336.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = 'Recognised words'
+  end
+end

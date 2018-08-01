@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8FD86AB5-993C-453C-96B6-E3DB7886E950}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\PeopleManager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Client\PeopleManagerMobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DesktopClient\PeopleManagerDesktopTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PeopleManager">
+        <MSBuild Projects="Server\PeopleManager.dproj"/>
+    </Target>
+    <Target Name="PeopleManager:Clean">
+        <MSBuild Projects="Server\PeopleManager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleManager:Make">
+        <MSBuild Projects="Server\PeopleManager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PeopleManagerMobile">
+        <MSBuild Projects="Client\PeopleManagerMobile.dproj"/>
+    </Target>
+    <Target Name="PeopleManagerMobile:Clean">
+        <MSBuild Projects="Client\PeopleManagerMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleManagerMobile:Make">
+        <MSBuild Projects="Client\PeopleManagerMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PeopleManagerDesktopTest">
+        <MSBuild Projects="DesktopClient\PeopleManagerDesktopTest.dproj"/>
+    </Target>
+    <Target Name="PeopleManagerDesktopTest:Clean">
+        <MSBuild Projects="DesktopClient\PeopleManagerDesktopTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleManagerDesktopTest:Make">
+        <MSBuild Projects="DesktopClient\PeopleManagerDesktopTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PeopleManager;PeopleManagerMobile;PeopleManagerDesktopTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PeopleManager:Clean;PeopleManagerMobile:Clean;PeopleManagerDesktopTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PeopleManager:Make;PeopleManagerMobile:Make;PeopleManagerDesktopTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,37 @@
+object HeaderFooterForm: THeaderFooterForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Header: TToolBar
+    Height = 48.000000000000000000
+    TabOrder = 0
+    Width = 384.000000000000000000
+    object HeaderLabel: TLabel
+      Align = Contents
+      Height = 48.000000000000000000
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Title'
+      Width = 384.000000000000000000
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Height = 48.000000000000000000
+    Position.Y = 519.000000000000000000
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    Width = 384.000000000000000000
+  end
+end

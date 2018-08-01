@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6E5B5F72-1808-4D0C-B1E1-25A4E3CD2577}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="MonitorServer\MonitorServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="MonitorMobileClient\MonitorMobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MonitorServer">
+        <MSBuild Projects="MonitorServer\MonitorServer.dproj"/>
+    </Target>
+    <Target Name="MonitorServer:Clean">
+        <MSBuild Projects="MonitorServer\MonitorServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MonitorServer:Make">
+        <MSBuild Projects="MonitorServer\MonitorServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MonitorMobile">
+        <MSBuild Projects="MonitorMobileClient\MonitorMobile.dproj"/>
+    </Target>
+    <Target Name="MonitorMobile:Clean">
+        <MSBuild Projects="MonitorMobileClient\MonitorMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MonitorMobile:Make">
+        <MSBuild Projects="MonitorMobileClient\MonitorMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MonitorServer;MonitorMobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MonitorServer:Clean;MonitorMobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MonitorServer:Make;MonitorMobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,205 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Photo with Effects'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object Label1: TLabel
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 470.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Take a photo and apply effects'
+  end
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Photos with Effects'
+    end
+  end
+  object Image1: TImage
+    MultiResBitmap.Height = 131
+    MultiResBitmap.Width = 162
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    MarginWrapMode = Fit
+    Size.Width = 384.000000000000000000
+    Size.Height = 470.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Panel1: TPanel
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Button1: TButton
+      Action = TakePhotoFromCameraAction1
+      Align = Left
+      Enabled = True
+      ImageIndex = -1
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'cameratoolbutton'
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Action = ShowShareSheetAction1
+      Align = Right
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 336.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 1
+    end
+    object btnEffects: TButton
+      Align = Left
+      Position.X = 96.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'composetoolbutton'
+      TabOrder = 2
+      Text = 'Button1'
+      OnClick = btnEffectsClick
+    end
+    object Button4: TButton
+      Action = TakePhotoFromLibraryAction1
+      Align = Left
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 48.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'organizetoolbutton'
+      TabOrder = 3
+    end
+  end
+  object EmbossEffect1: TEmbossEffect
+    Amount = 0.500000000000000000
+    Width = 3.000000000000000000
+  end
+  object RadialBlurEffect1: TRadialBlurEffect
+    BlurAmount = 1.000000000000000000
+  end
+  object ContrastEffect1: TContrastEffect
+    Brightness = 0.000000000000000000
+    Contrast = 1.500000000000000000
+  end
+  object ColorKeyAlphaEffect1: TColorKeyAlphaEffect
+    ColorKey = claNull
+    Tolerance = 0.300000011920929000
+  end
+  object InvertEffect1: TInvertEffect
+  end
+  object SepiaEffect1: TSepiaEffect
+    Amount = 0.500000000000000000
+  end
+  object TilerEffect1: TTilerEffect
+    VerticalTileCount = 4.000000000000000000
+    HorizontalTileCount = 3.000000000000000000
+    HorizontalOffset = 0.000000000000000000
+    VerticalOffset = 0.000000000000000000
+  end
+  object PixelateEffect1: TPixelateEffect
+    BlockCount = 25.000000000000000000
+  end
+  object ToonEffect1: TToonEffect
+    Levels = 5.000000000000000000
+  end
+  object PaperSketchEffect1: TPaperSketchEffect
+    brushSize = 3.000000000000000000
+  end
+  object PencilStrokeEffect1: TPencilStrokeEffect
+    brushSize = 5.000000000000000000
+  end
+  object RippleEffect1: TRippleEffect
+    Amplitude = 0.100000001490116100
+    Frequency = 70.000000000000000000
+    Phase = 0.000000000000000000
+    AspectRatio = 1.500000000000000000
+  end
+  object WaveEffect1: TWaveEffect
+    Time = 0.000000000000000000
+    WaveSize = 64.000000000000000000
+  end
+  object WrapEffect1: TWrapEffect
+    LeftStart = 0.000000000000000000
+    LeftControl1 = 0.250000000000000000
+    LeftControl2 = 0.250000000000000000
+    LeftEnd = 0.000000000000000000
+    RightStart = 1.000000000000000000
+    RightControl1 = 0.750000000000000000
+    RightControl2 = 0.750000000000000000
+    RightEnd = 1.000000000000000000
+  end
+  object InnerGlowEffect1: TInnerGlowEffect
+    Softness = 0.400000005960464500
+    GlowColor = claGold
+    Opacity = 0.899999976158142100
+  end
+  object lvEffects: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Margins.Left = 1.000000000000000000
+    Margins.Top = 1.000000000000000000
+    Margins.Right = 1.000000000000000000
+    Margins.Bottom = 1.000000000000000000
+    Position.X = 48.000000000000000000
+    Position.Y = 125.000000000000000000
+    Size.Width = 287.000000000000000000
+    Size.Height = 366.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    OnItemClick = lvEffectsItemClick
+  end
+  object ActionList1: TActionList
+    Left = 24
+    Top = 112
+    object TakePhotoFromCameraAction1: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      MaxHeight = 4096
+      MaxWidth = 4096
+      OnDidFinishTaking = TakePhotoFromCameraAction1DidFinishTaking
+    end
+    object ShowShareSheetAction1: TShowShareSheetAction
+      Category = 'Media Library'
+      OnBeforeExecute = ShowShareSheetAction1BeforeExecute
+    end
+    object TakePhotoFromLibraryAction1: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      MaxHeight = 4096
+      MaxWidth = 4096
+      OnDidFinishTaking = TakePhotoFromLibraryAction1DidFinishTaking
+    end
+  end
+end

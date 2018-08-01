@@ -1,0 +1,487 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Mobile People Manager'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object TopToolBar: TToolBar
+    Anchors = []
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBarLabel: TLabel
+      Action = TitleAction
+      Align = Contents
+      Enabled = True
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+    end
+    object btnBack: TSpeedButton
+      Action = PreviousTabAction1
+      Align = MostLeft
+      Enabled = True
+      ImageIndex = -1
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+    end
+    object btnNext: TSpeedButton
+      Action = NextTabAction1
+      Align = MostRight
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 336.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'nexttoolbutton'
+    end
+    object AniIndicator1: TAniIndicator
+      Action = acWaiting
+      Align = Right
+      Enabled = True
+      HitTest = False
+      Position.X = 286.000000000000000000
+      Size.Width = 50.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Style = Circular
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 471.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 1
+    TabPosition = None
+    Sizes = (
+      384s
+      471s
+      384s
+      471s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'People Manager'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 50.000000000000000000
+      object ListViewPeople: TListView
+        ItemAppearanceClassName = 'TListItemAppearance'
+        ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 384.000000000000000000
+        Size.Height = 471.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        CanSwipeDelete = False
+        OnItemClick = ListViewPeopleItemClick
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Person Details'
+      ExplicitSize.cx = 50.000000000000000000
+      ExplicitSize.cy = 50.000000000000000000
+      object EditFirstName: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 4
+        Position.X = 24.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 1005.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label1: TLabel
+          Position.Y = -22.000000000000000000
+          Size.Width = 153.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'First name'
+        end
+      end
+      object EditLastName: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 3
+        Position.X = 24.000000000000000000
+        Position.Y = 130.000000000000000000
+        Size.Width = 1005.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label2: TLabel
+          Position.Y = -22.000000000000000000
+          Size.Width = 153.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Last name'
+        end
+      end
+      object EditWorkNumber: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 2
+        Position.X = 24.000000000000000000
+        Position.Y = 212.000000000000000000
+        Size.Width = 1005.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label3: TLabel
+          Position.Y = -22.000000000000000000
+          Size.Width = 217.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Work phone number'
+        end
+      end
+      object EditMobileNumber: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 1
+        Position.X = 24.000000000000000000
+        Position.Y = 294.000000000000000000
+        Size.Width = 1005.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label4: TLabel
+          Position.Y = -22.000000000000000000
+          Size.Width = 209.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Mobile phone number'
+        end
+      end
+      object EditEmail: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 0
+        Position.X = 24.000000000000000000
+        Position.Y = 376.000000000000000000
+        Size.Width = 1005.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        object Label5: TLabel
+          Position.Y = -22.000000000000000000
+          Size.Width = 82.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Email'
+        end
+      end
+      object GridLayout1: TGridLayout
+        Align = Bottom
+        ItemHeight = 45.000000000000000000
+        ItemWidth = 80.000000000000000000
+        Padding.Left = 10.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 10.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Orientation = Horizontal
+        Position.Y = 416.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 55.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object Button1: TButton
+          Action = acSavePerson
+          Enabled = True
+          ImageIndex = -1
+          Position.X = 10.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+        end
+        object Button2: TButton
+          Action = LiveBindingsBindNavigateCancel1
+          Enabled = True
+          ImageIndex = -1
+          Position.X = 90.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+        end
+        object Layout1: TLayout
+          Position.X = 170.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 8
+        end
+        object Button4: TButton
+          Action = acDeletePerson
+          Enabled = True
+          ImageIndex = -1
+          Position.X = 250.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 45.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+        end
+      end
+    end
+  end
+  object BottomToolBar: TToolBar
+    Align = Bottom
+    Anchors = [akLeft]
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 2
+    object Button3: TButton
+      Action = acRefreshData
+      Align = Right
+      Enabled = True
+      ImageIndex = -1
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 333.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 2
+    end
+    object Button5: TButton
+      Action = acNewPerson
+      Align = Left
+      Enabled = True
+      ImageIndex = -1
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.X = 3.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'additembutton'
+      TabOrder = 1
+    end
+  end
+  object ppMessage: TPopup
+    Placement = Center
+    PlacementTarget = TabControl1
+    Position.X = 48.000000000000000000
+    Position.Y = 216.000000000000000000
+    Size.Width = 297.000000000000000000
+    Size.Height = 145.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    object Rectangle1: TRectangle
+      Align = Contents
+      HitTest = False
+      Size.Width = 297.000000000000000000
+      Size.Height = 145.000000000000000000
+      Size.PlatformDefault = False
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object ShadowEffect1: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+      object lblMessage: TLabel
+        Align = VertCenter
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 46.000000000000000000
+        Size.Width = 287.000000000000000000
+        Size.Height = 52.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'lblMessage'
+      end
+    end
+  end
+  object ppError: TPopup
+    Placement = Center
+    PlacementTarget = TabControl1
+    Position.X = 49.000000000000000000
+    Position.Y = 81.000000000000000000
+    Size.Width = 297.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    object Rectangle2: TRectangle
+      Align = Contents
+      Fill.Color = claWhite
+      HitTest = False
+      Size.Width = 297.000000000000000000
+      Size.Height = 113.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claRed
+      XRadius = 10.000000000000000000
+      YRadius = 10.000000000000000000
+      object ShadowEffect2: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+      object lblError: TLabel
+        Align = VertCenter
+        StyledSettings = [Family, Size, Style]
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 30.000000000000000000
+        Size.Width = 287.000000000000000000
+        Size.Height = 52.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claRed
+        TextSettings.HorzAlign = Center
+        Text = 'lblMessage'
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 304
+    Top = 136
+    object TitleAction: TControlAction
+      Category = 'Tab'
+      Text = 'TitleAction'
+      OnUpdate = TitleActionUpdate
+    end
+    object PreviousTabAction1: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+      ShortCut = 137
+      OnUpdate = PreviousTabAction1Update
+    end
+    object NextTabAction1: TNextTabAction
+      Category = 'Tab'
+      TabControl = TabControl1
+      OnUpdate = NextTabAction1Update
+    end
+    object acRefreshData: TAction
+      Text = 'Refresh'
+      OnExecute = acRefreshDataExecute
+    end
+    object acSavePerson: TAction
+      Text = 'OK'
+      OnExecute = acSavePersonExecute
+      OnUpdate = acSavePersonUpdate
+    end
+    object LiveBindingsBindNavigateCancel1: TFMXBindNavigateCancel
+      Category = 'LiveBindings'
+      Text = 'Cancel'
+      DataSource = BindSourceDB1
+    end
+    object acDeletePerson: TAction
+      Text = 'Delete'
+      OnExecute = acDeletePersonExecute
+    end
+    object acNewPerson: TAction
+      OnExecute = acNewPersonExecute
+    end
+    object acWaiting: TControlAction
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = dmMain.dsPeople
+    ScopeMappings = <>
+    Left = 192
+    Top = 136
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 308
+    Top = 205
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'FULL_NAME'
+      Control = ListViewPeople
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'FIRST_NAME'
+      Control = EditFirstName
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'LAST_NAME'
+      Control = EditLastName
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'WORK_PHONE_NUMBER'
+      Control = EditWorkNumber
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'MOBILE_PHONE_NUMBER'
+      Control = EditMobileNumber
+      Track = False
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'EMAIL'
+      Control = EditEmail
+      Track = False
+    end
+  end
+end

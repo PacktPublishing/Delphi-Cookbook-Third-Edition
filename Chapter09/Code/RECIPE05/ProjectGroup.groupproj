@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8370484F-2B51-4971-B90F-4159AB96BF91}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TTS\MobileTTS.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="VCLApplication\VCLTTSClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MobileTTS">
+        <MSBuild Projects="TTS\MobileTTS.dproj"/>
+    </Target>
+    <Target Name="MobileTTS:Clean">
+        <MSBuild Projects="TTS\MobileTTS.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MobileTTS:Make">
+        <MSBuild Projects="TTS\MobileTTS.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VCLTTSClient">
+        <MSBuild Projects="VCLApplication\VCLTTSClient.dproj"/>
+    </Target>
+    <Target Name="VCLTTSClient:Clean">
+        <MSBuild Projects="VCLApplication\VCLTTSClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLTTSClient:Make">
+        <MSBuild Projects="VCLApplication\VCLTTSClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MobileTTS;VCLTTSClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MobileTTS:Clean;VCLTTSClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MobileTTS:Make;VCLTTSClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

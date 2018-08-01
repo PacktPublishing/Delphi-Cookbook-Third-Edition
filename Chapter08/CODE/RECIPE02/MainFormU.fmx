@@ -1,0 +1,87 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Simple TODO'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnSaveState = FormSaveState
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Simple TODO'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object btnDelete: TButton
+      Action = acDelete
+      Align = Left
+      Enabled = True
+      ImageIndex = -1
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'trashtoolbutton'
+      TabOrder = 0
+    end
+    object btnNew: TButton
+      Action = acNew
+      Align = Right
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 336.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'additembutton'
+      TabOrder = 1
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 471.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ItemAppearance.ItemHeight = 80
+    ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    SearchVisible = True
+  end
+  object ActionList1: TActionList
+    OnUpdate = ActionList1Update
+    Left = 184
+    Top = 104
+    object acNew: TAction
+      OnExecute = acNewExecute
+    end
+    object acDelete: TAction
+      Text = 'acDelete'
+      OnExecute = acDeleteExecute
+    end
+  end
+end

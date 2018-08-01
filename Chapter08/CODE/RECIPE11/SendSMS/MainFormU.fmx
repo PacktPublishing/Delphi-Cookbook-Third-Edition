@@ -1,0 +1,78 @@
+object SMSSendingForm: TSMSSendingForm
+  Left = 0
+  Top = 0
+  Caption = 'SMS Sending Form'
+  ClientHeight = 489
+  ClientWidth = 351
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object btnSendNext: TButton
+    Action = actSendSMS
+    Align = Top
+    AutoTranslate = False
+    Enabled = True
+    ImageIndex = -1
+    Position.Y = 103.000000000000000000
+    Size.Width = 351.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 351.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label1: TLabel
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 351.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 25.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'SMS Sending Service'
+      TabOrder = 0
+    end
+  end
+  object Label2: TLabel
+    Align = Client
+    StyledSettings = [Family, Style]
+    Size.Width = 351.000000000000000000
+    Size.Height = 329.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 35.000000000000000000
+    TextSettings.FontColor = claBlue
+    TextSettings.HorzAlign = Center
+    Text = 'Sending Service Stopped...'
+    TabOrder = 4
+  end
+  object btnStartSending: TButton
+    Align = Top
+    StyledSettings = [Family, Size, Style]
+    Position.Y = 48.000000000000000000
+    Size.Width = 351.000000000000000000
+    Size.Height = 55.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Start Sending Service'
+    TextSettings.FontColor = claBlue
+    OnClick = btnStartSendingClick
+  end
+  object SendTimer: TTimer
+    Enabled = False
+    OnTimer = actSendSMSExecute
+    Left = 48
+    Top = 192
+  end
+  object ActionList1: TActionList
+    Left = 160
+    Top = 232
+    object actSendSMS: TAction
+      Text = 'Send Next SMS'
+      OnExecute = actSendSMSExecute
+    end
+  end
+end

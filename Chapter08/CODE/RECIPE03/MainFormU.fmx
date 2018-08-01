@@ -1,0 +1,343 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'TODOList'
+  ClientHeight = 472
+  ClientWidth = 358
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 358.000000000000000000
+    Size.Height = 424.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = None
+    Sizes = (
+      358s
+      424s
+      358s
+      424s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object TopToolBar: TToolBar
+        Anchors = []
+        Size.Width = 358.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object ToolBarLabel: TLabel
+          Align = Contents
+          Size.Width = 358.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'My TODO List'
+        end
+        object btnNext: TSpeedButton
+          Action = ChangeTabAction1
+          Align = Right
+          Enabled = True
+          ImageIndex = -1
+          Margins.Right = 5.000000000000000000
+          Position.X = 296.000000000000000000
+          Size.Width = 57.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+        ItemEditAppearanceClassName = 'TListItemRightDetailShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 358.000000000000000000
+        Size.Height = 376.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearance.ItemHeight = 100
+        OnItemClick = ListView1ItemClick
+        SearchVisible = True
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object TopToolBar1: TToolBar
+        Anchors = []
+        Size.Width = 358.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object ToolBarLabel1: TLabel
+          Align = Contents
+          Size.Width = 358.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = 'TODO'
+        end
+        object btnBack: TButton
+          Action = ChangeTabAction2
+          Align = Left
+          Enabled = True
+          ImageIndex = -1
+          Margins.Left = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'backtoolbutton'
+          TabOrder = 1
+        end
+      end
+      object Label1: TLabel
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 113.000000000000000000
+        Size.Width = 348.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Task description'
+        TabOrder = 3
+      end
+      object memToDoText: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 348.000000000000000000
+        Size.Height = 276.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 340.000000000000000000
+        Viewport.Height = 268.000000000000000000
+      end
+      object Layout1: TLayout
+        Align = Top
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 53.000000000000000000
+        Size.Width = 348.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object swtCompleted: TSwitch
+          Align = Left
+          IsChecked = False
+          Position.X = 5.000000000000000000
+          Position.Y = 12.000000000000000000
+          Size.Width = 44.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'switchstyle'
+          TabOrder = 0
+        end
+        object lblCompleted: TLabel
+          Align = Client
+          Size.Width = 294.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Label1'
+        end
+      end
+    end
+  end
+  object BottomToolBar: TToolBar
+    Align = Bottom
+    Anchors = [akLeft]
+    Position.Y = 424.000000000000000000
+    Size.Width = 358.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object Button1: TButton
+      Action = acNew
+      Align = Left
+      Enabled = True
+      ImageIndex = -1
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'additembutton'
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Action = LiveBindingsBindNavigateDelete1
+      Align = Right
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 310.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'trashtoolbutton'
+      TabOrder = 1
+    end
+  end
+  object ActionList1: TActionList
+    OnUpdate = ActionList1Update
+    Left = 168
+    Top = 240
+    object ChangeTabAction1: TChangeTabAction
+      CustomText = 'Next'
+      Tab = TabItem2
+      OnUpdate = ChangeTabAction1Update
+    end
+    object ChangeTabAction2: TChangeTabAction
+      Tab = TabItem1
+    end
+    object LiveBindingsBindNavigateDelete1: TFMXBindNavigateDelete
+      Category = 'LiveBindings'
+      Text = 'Delete'
+      DataSource = bsTODO
+    end
+    object acNew: TAction
+      Category = 'LiveBindings'
+      OnExecute = acNewExecute
+      OnUpdate = acNewUpdate
+    end
+  end
+  object Connection: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Books\Delphi Cookbook 3rd Edition\delphicookbook\Cod' +
+        'e\Chapter 8\CODE\RECIPE03\todos.sdb'
+      'DriverID=SQLite')
+    ConnectedStoredUsage = []
+    LoginPrompt = False
+    AfterConnect = ConnectionAfterConnect
+    BeforeConnect = ConnectionBeforeConnect
+    Left = 48
+    Top = 84
+  end
+  object qryTODOs: TFDQuery
+    ActiveStoredUsage = [auDesignTime]
+    Connection = Connection
+    SQL.Strings = (
+      'SELECT * FROM TODOS ORDER BY ID DESC')
+    Left = 48
+    Top = 152
+    object qryTODOsID: TFDAutoIncField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object qryTODOsDESCRIPTION: TStringField
+      FieldName = 'DESCRIPTION'
+      Origin = 'DESCRIPTION'
+      Required = True
+      FixedChar = True
+      Size = 50
+    end
+    object qryTODOsDONE: TIntegerField
+      FieldName = 'DONE'
+      Origin = 'DONE'
+      Required = True
+    end
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 168
+    Top = 158
+  end
+  object bsTODO: TBindSourceDB
+    DataSet = qryTODOs
+    ScopeMappings = <>
+    Left = 48
+    Top = 232
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <
+      item
+        ID = 'BoolToVariant'
+        State = eaExclude
+      end>
+    Left = 284
+    Top = 85
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsTODO
+      FieldName = 'DESCRIPTION'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'DONE'
+          ControlMemberName = 'Detail'
+          CustomFormat = 'IfThen(value = 1,'#39'completed'#39','#39#39')'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsTODO
+      FieldName = 'DESCRIPTION'
+      Control = memToDoText
+      Track = False
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsTODO
+      FieldName = 'DONE'
+      Control = swtCompleted
+      Track = True
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = bsTODO
+      FieldName = 'DONE'
+      Component = lblCompleted
+      CustomFormat = '"The task is " + IfThen(value = 1, "completed","not completed")'
+      ComponentProperty = 'Text'
+    end
+  end
+end

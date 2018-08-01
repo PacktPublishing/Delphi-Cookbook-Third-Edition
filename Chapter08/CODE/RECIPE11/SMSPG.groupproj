@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5FD81CD7-351B-43D5-9A5A-3B21A1B2C9CC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CustomersManagerServer\SmsServerManager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SendSMS\SendSMS.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TestConsole\TestConsole.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SmsServerManager">
+        <MSBuild Projects="CustomersManagerServer\SmsServerManager.dproj"/>
+    </Target>
+    <Target Name="SmsServerManager:Clean">
+        <MSBuild Projects="CustomersManagerServer\SmsServerManager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SmsServerManager:Make">
+        <MSBuild Projects="CustomersManagerServer\SmsServerManager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SendSMS">
+        <MSBuild Projects="SendSMS\SendSMS.dproj"/>
+    </Target>
+    <Target Name="SendSMS:Clean">
+        <MSBuild Projects="SendSMS\SendSMS.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SendSMS:Make">
+        <MSBuild Projects="SendSMS\SendSMS.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestConsole">
+        <MSBuild Projects="TestConsole\TestConsole.dproj"/>
+    </Target>
+    <Target Name="TestConsole:Clean">
+        <MSBuild Projects="TestConsole\TestConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestConsole:Make">
+        <MSBuild Projects="TestConsole\TestConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SmsServerManager;SendSMS;TestConsole"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SmsServerManager:Clean;SendSMS:Clean;TestConsole:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SmsServerManager:Make;SendSMS:Make;TestConsole:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

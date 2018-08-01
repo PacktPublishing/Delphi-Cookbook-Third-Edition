@@ -1,0 +1,134 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 508
+  ClientWidth = 320
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 320.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Weather forecasts'
+    end
+    object AniIndicator1: TAniIndicator
+      Align = Right
+      StyleLookup = 'aniindicatorstyle'
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 280.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 30.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+      Style = Circular
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 460.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object lblInfo: TLabel
+      Align = Client
+      Size.Width = 320.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = '...'
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    AllowSelection = False
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 363.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
+    ItemAppearanceObjects.ItemObjects.Text.Height = 50.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    CanSwipeDelete = False
+  end
+  object Panel1: TPanel
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object btnGetForecasts: TButton
+      Align = Right
+      Position.X = 272.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'btnGetForecasts'
+      OnClick = btnGetForecastsClick
+    end
+    object EditCity: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Text = 'Roma'
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 190.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'City'
+    end
+    object EditCountry: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Right
+      TabOrder = 2
+      Text = 'IT'
+      Position.X = 200.000000000000000000
+      Position.Y = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Country'
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Params = <>
+    HandleRedirects = True
+    Left = 248
+    Top = 288
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <>
+    SynchronizedEvents = False
+    Left = 176
+    Top = 288
+  end
+end

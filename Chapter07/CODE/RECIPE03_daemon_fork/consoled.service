@@ -1,0 +1,9 @@
+[Unit]
+Description=Example of simple TCPIP daemon program
+
+[Service]
+Type=simple
+ExecStart=/home/spinettaro/PAServer/scratch-dir/d.spinetti-ubuntudev/consoled
+
+[Install]
+WantedBy=multi-user.target

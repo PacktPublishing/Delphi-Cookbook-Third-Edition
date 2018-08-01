@@ -1,0 +1,151 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 543
+  ClientWidth = 356
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object Button1: TButton
+    Action = actSendSurvey
+    Align = Bottom
+    Enabled = True
+    ImageIndex = -1
+    Position.Y = 485.000000000000000000
+    Size.Width = 356.000000000000000000
+    Size.Height = 58.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object EditFirstName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 2
+    Position.X = 10.000000000000000000
+    Position.Y = 10.000000000000000000
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Size.Width = 336.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'First name'
+  end
+  object EditLastName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 1
+    Position.X = 10.000000000000000000
+    Position.Y = 52.000000000000000000
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Margins.Bottom = 10.000000000000000000
+    Size.Width = 336.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Last name'
+  end
+  object Layout1: TLayout
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 336.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object SwitchOption1: TSwitch
+      Align = Right
+      IsChecked = False
+      Position.X = 292.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+    end
+    object Label1: TLabel
+      Align = Client
+      Size.Width = 292.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Option 1'
+    end
+  end
+  object Layout2: TLayout
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 144.000000000000000000
+    Size.Width = 336.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object SwitchOption2: TSwitch
+      Align = Right
+      IsChecked = False
+      Position.X = 292.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+    end
+    object Label2: TLabel
+      Align = Client
+      Size.Width = 292.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Option 2'
+    end
+  end
+  object Layout3: TLayout
+    Align = Top
+    Margins.Left = 10.000000000000000000
+    Margins.Top = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 336.000000000000000000
+    Size.Height = 52.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object SpinBoxAge: TSpinBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 4
+      Cursor = crIBeam
+      Min = 15.000000000000000000
+      Max = 80.000000000000000000
+      Value = 20.000000000000000000
+      Size.Width = 336.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label3: TLabel
+      Align = Top
+      Size.Width = 336.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = 'Age'
+    end
+  end
+  object ActionList1: TActionList
+    Left = 144
+    Top = 192
+    object actSendSurvey: TAction
+      Text = 'Send Survey'
+      OnExecute = actSendSurveyExecute
+    end
+  end
+end

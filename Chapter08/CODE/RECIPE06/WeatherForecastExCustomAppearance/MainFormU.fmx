@@ -1,0 +1,215 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 432
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 432.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 432.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Weather forecasts Custom Appearance'
+    end
+    object AniIndicator1: TAniIndicator
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 384.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 38.000000000000000000
+      Size.Height = 28.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 432.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object lblInfo: TLabel
+      Align = Client
+      Size.Width = 432.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = '...'
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TDelphiCookbookItemAppearance'
+    ItemEditAppearanceClassName = 'TCustomizeItemObjects'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    ItemSpaces.Right = 30.000000000000000000
+    Align = Client
+    Size.Width = 432.000000000000000000
+    Size.Height = 422.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ItemAppearanceObjects.HeaderObjects.Text.TextAlign = Center
+    ItemAppearanceObjects.HeaderObjects.Text.TextColor = claGreen
+    ItemAppearanceObjects.HeaderObjects.Text.VertAlign = Center
+    ItemAppearanceObjects.FooterObjects.Text.Visible = False
+    CanSwipeDelete = False
+  end
+  object Panel1: TPanel
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 432.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object btnGetForecasts: TButton
+      Align = Right
+      Position.X = 384.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'btnGetForecasts'
+      OnClick = btnGetForecastsClick
+    end
+    object EditCity: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      Text = 'Roma'
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 272.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'City'
+    end
+    object EditCountry: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Right
+      TabOrder = 2
+      Text = 'IT'
+      Position.X = 302.000000000000000000
+      Position.Y = 10.000000000000000000
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 72.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Country'
+    end
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 204
+    Top = 149
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'description'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'mintemp'
+          ControlMemberName = 'MinTemp'
+        end
+        item
+          SourceMemberName = 'maxtemp'
+          ControlMemberName = 'MaxTemp'
+        end>
+      FillHeaderExpressions = <>
+      FillHeaderFieldName = 'day'
+      FillBreakGroups = <>
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Params = <>
+    HandleRedirects = True
+    Left = 96
+    Top = 216
+  end
+  object RESTRequest1: TRESTRequest
+    Client = RESTClient1
+    Params = <>
+    SynchronizedEvents = False
+    Left = 96
+    Top = 144
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'day'
+        DataType = ftString
+        Size = 40
+      end
+      item
+        Name = 'description'
+        DataType = ftString
+        Size = 50
+      end
+      item
+        Name = 'mintemp'
+        DataType = ftFloat
+      end
+      item
+        Name = 'maxtemp'
+        DataType = ftFloat
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    StoreDefs = True
+    Left = 96
+    Top = 288
+    object FDMemTable1day: TStringField
+      FieldName = 'day'
+      Size = 40
+    end
+    object FDMemTable1description: TStringField
+      FieldName = 'description'
+      Size = 50
+    end
+    object FDMemTable1mintemp: TFloatField
+      FieldName = 'mintemp'
+      DisplayFormat = '#0.00'#176
+    end
+    object FDMemTable1maxtemp: TFloatField
+      FieldName = 'maxtemp'
+      DisplayFormat = '#0.00'#176
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 208
+    Top = 288
+  end
+end
