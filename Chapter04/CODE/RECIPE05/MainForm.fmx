@@ -1,0 +1,91 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'TPath Demo'
+  ClientHeight = 531
+  ClientWidth = 820
+  FormFactor.Width = 1600
+  FormFactor.Height = 900
+  FormFactor.Devices = [dkDesktop]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Path1: TPath
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Height = 465.000000000000000000
+    Position.X = 400.000000000000000000
+    Position.Y = 48.000000000000000000
+    Width = 401.000000000000000000
+  end
+  object Button1: TButton
+    Font.Family = 'Segoe UI Semibold'
+    Font.Style = [fsBold]
+    StyledSettings = [ssSize, ssFontColor]
+    Height = 33.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 1
+    Text = 'Display Path'
+    Width = 121.000000000000000000
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [igPan, igLongTap, igDoubleTap]
+    Height = 465.000000000000000000
+    Position.X = 16.000000000000000000
+    Position.Y = 48.000000000000000000
+    TabOrder = 2
+    Width = 369.000000000000000000
+    Font.Family = 'Consolas'
+    Font.Size = 14.000000000000000000
+    WordWrap = True
+  end
+  object Button2: TButton
+    Height = 33.000000000000000000
+    Position.X = 400.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 3
+    Text = 'Create Hardcoded Path 1'
+    Width = 145.000000000000000000
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Height = 33.000000000000000000
+    Position.X = 552.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 4
+    Text = 'Create Hardcoded Path 2'
+    Width = 145.000000000000000000
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Height = 33.000000000000000000
+    Position.X = 704.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 5
+    Text = 'Path 3'
+    Width = 97.000000000000000000
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Height = 33.000000000000000000
+    Position.X = 288.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 6
+    Text = 'Text To Path'
+    Width = 96.000000000000000000
+    OnClick = Button5Click
+  end
+  object Button6: TButton
+    Height = 33.000000000000000000
+    Position.X = 184.000000000000000000
+    Position.Y = 8.000000000000000000
+    TabOrder = 7
+    Text = 'TEST'
+    Width = 96.000000000000000000
+    OnClick = Button6Click
+  end
+end

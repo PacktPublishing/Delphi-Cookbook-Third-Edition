@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{226A3AC3-39FB-48E2-8B07-9EE53D490CA4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ThreadsTermination.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AsyncTaskTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ThreadsTermination">
+        <MSBuild Projects="ThreadsTermination.dproj"/>
+    </Target>
+    <Target Name="ThreadsTermination:Clean">
+        <MSBuild Projects="ThreadsTermination.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ThreadsTermination:Make">
+        <MSBuild Projects="ThreadsTermination.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AsyncTaskTests">
+        <MSBuild Projects="AsyncTaskTests.dproj"/>
+    </Target>
+    <Target Name="AsyncTaskTests:Clean">
+        <MSBuild Projects="AsyncTaskTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AsyncTaskTests:Make">
+        <MSBuild Projects="AsyncTaskTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ThreadsTermination;AsyncTaskTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ThreadsTermination:Clean;AsyncTaskTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ThreadsTermination:Make;AsyncTaskTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

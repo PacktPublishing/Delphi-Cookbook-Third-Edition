@@ -1,0 +1,166 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  FullScreen = True
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Slides remote control'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 519.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object btnConnect: TButton
+      Align = Client
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'Connect'
+      OnClick = btnConnectClick
+    end
+  end
+  object GridPanelLayout1: TGridPanelLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    ColumnCollection = <
+      item
+        Value = 50.000000000000000000
+      end
+      item
+        Value = 50.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = btnLeft
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = btnNext
+        Row = 0
+      end>
+    RowCollection = <
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object btnLeft: TButton
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 172.000000000000000000
+      Size.Height = 237.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = '<< PREV'
+      TextSettings.Font.Size = 36.000000000000000000
+      TintColor = claYellow
+      OnClick = btnLeftClick
+      object ShadowEffect1: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+    end
+    object btnNext: TButton
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 172.000000000000000000
+      Size.Height = 237.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'NEXT >>'
+      TextSettings.Font.Size = 36.000000000000000000
+      TintColor = claLimegreen
+      OnClick = btnNextClick
+      object ShadowEffect2: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+    end
+  end
+  object Panel1: TPanel
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 214.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    object lblMinutes: TLabel
+      Align = Client
+      StyledSettings = [Family, Style]
+      Size.Width = 384.000000000000000000
+      Size.Height = 214.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 46.000000000000000000
+      TextSettings.FontColor = claRed
+      TextSettings.HorzAlign = Center
+      Text = '--'
+    end
+  end
+  object TetheringManager1: TTetheringManager
+    OnPairedToRemote = TetheringManager1PairedToRemote
+    OnEndAutoConnect = TetheringManager1EndAutoConnect
+    Text = 'slides.remote'
+    AllowedAdapters = 'Network'
+    Left = 80
+    Top = 344
+  end
+  object TetheringAppProfile1: TTetheringAppProfile
+    Manager = TetheringManager1
+    Text = 'presenter.remote'
+    Group = 'com.danieles.presenters'
+    OnDisconnect = TetheringAppProfile1Disconnect
+    Actions = <>
+    Resources = <
+      item
+        Name = 'time'
+        IsPublic = True
+        Kind = Mirror
+        OnResourceReceived = TetheringAppProfile1Resources0ResourceReceived
+      end>
+    Left = 232
+    Top = 344
+  end
+end

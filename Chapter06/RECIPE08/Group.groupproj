@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C2546703-A933-455C-BF1C-BDC62C3575A2}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="VCL\Presenter.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Mobile\PresenterRemote.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Presenter">
+        <MSBuild Projects="VCL\Presenter.dproj"/>
+    </Target>
+    <Target Name="Presenter:Clean">
+        <MSBuild Projects="VCL\Presenter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Presenter:Make">
+        <MSBuild Projects="VCL\Presenter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PresenterRemote">
+        <MSBuild Projects="Mobile\PresenterRemote.dproj"/>
+    </Target>
+    <Target Name="PresenterRemote:Clean">
+        <MSBuild Projects="Mobile\PresenterRemote.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PresenterRemote:Make">
+        <MSBuild Projects="Mobile\PresenterRemote.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Presenter;PresenterRemote"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Presenter:Clean;PresenterRemote:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Presenter:Make;PresenterRemote:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

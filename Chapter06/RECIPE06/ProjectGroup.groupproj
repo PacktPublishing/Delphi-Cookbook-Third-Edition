@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F6A6473F-AFF1-41A7-8912-FB84D81433ED}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CustomersManagerServer\PeopleManager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CustomerManagerTestClient\PeopleManagerTestClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PeopleManager">
+        <MSBuild Projects="CustomersManagerServer\PeopleManager.dproj"/>
+    </Target>
+    <Target Name="PeopleManager:Clean">
+        <MSBuild Projects="CustomersManagerServer\PeopleManager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleManager:Make">
+        <MSBuild Projects="CustomersManagerServer\PeopleManager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PeopleManagerTestClient">
+        <MSBuild Projects="CustomerManagerTestClient\PeopleManagerTestClient.dproj"/>
+    </Target>
+    <Target Name="PeopleManagerTestClient:Clean">
+        <MSBuild Projects="CustomerManagerTestClient\PeopleManagerTestClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PeopleManagerTestClient:Make">
+        <MSBuild Projects="CustomerManagerTestClient\PeopleManagerTestClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PeopleManager;PeopleManagerTestClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PeopleManager:Clean;PeopleManagerTestClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PeopleManager:Make;PeopleManagerTestClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

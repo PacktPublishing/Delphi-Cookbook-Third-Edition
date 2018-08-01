@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7A83D261-DFB4-42C5-8AE1-8A0B5043AA06}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PhoneBookService.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PhoneBookService">
+        <MSBuild Projects="PhoneBookService.dproj"/>
+    </Target>
+    <Target Name="PhoneBookService:Clean">
+        <MSBuild Projects="PhoneBookService.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PhoneBookService:Make">
+        <MSBuild Projects="PhoneBookService.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PhoneBookService"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PhoneBookService:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PhoneBookService:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

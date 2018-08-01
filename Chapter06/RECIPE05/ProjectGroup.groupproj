@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D0DEAEF8-992C-48ED-8BAD-13E7FD83F133}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HTTPServer\PhoneBookServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HTTPClientWithTRESTClient\HTTPClientWithTRESTClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="HTTPClientWithTidHTTP\HTTPClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PhoneBookServer">
+        <MSBuild Projects="HTTPServer\PhoneBookServer.dproj"/>
+    </Target>
+    <Target Name="PhoneBookServer:Clean">
+        <MSBuild Projects="HTTPServer\PhoneBookServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PhoneBookServer:Make">
+        <MSBuild Projects="HTTPServer\PhoneBookServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HTTPClientWithTRESTClient">
+        <MSBuild Projects="HTTPClientWithTRESTClient\HTTPClientWithTRESTClient.dproj"/>
+    </Target>
+    <Target Name="HTTPClientWithTRESTClient:Clean">
+        <MSBuild Projects="HTTPClientWithTRESTClient\HTTPClientWithTRESTClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HTTPClientWithTRESTClient:Make">
+        <MSBuild Projects="HTTPClientWithTRESTClient\HTTPClientWithTRESTClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HTTPClient">
+        <MSBuild Projects="HTTPClientWithTidHTTP\HTTPClient.dproj"/>
+    </Target>
+    <Target Name="HTTPClient:Clean">
+        <MSBuild Projects="HTTPClientWithTidHTTP\HTTPClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HTTPClient:Make">
+        <MSBuild Projects="HTTPClientWithTidHTTP\HTTPClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PhoneBookServer;HTTPClientWithTRESTClient;HTTPClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PhoneBookServer:Clean;HTTPClientWithTRESTClient:Clean;HTTPClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PhoneBookServer:Make;HTTPClientWithTRESTClient:Make;HTTPClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

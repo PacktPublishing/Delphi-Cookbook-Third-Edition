@@ -1,0 +1,18 @@
+procedure TForm3.btnSendPostRequestClick(Sender: TObject);
+var
+  LFormData: TStringList;
+  LResp: IHTTPResponse;
+begin
+  LFormData := TStringList.Create(true);
+  try
+    LFormData.Values['first_name'] := 'Daniele';
+    LFormData.Values['last_name'] := 'Teti';
+    LFormData.Values['work_phone_number'] := '789-9876542';
+    LFormData.Values['mobile_phone_number'] := '555-7854216';
+    LFormData.Values['email'] := 'd.teti@bittime.it';
+    LResp := NetHTTPClient1.Post('http://localhost:8080/saveperson', LFormData);
+    Memo1.Lines.Text := LResp.ContentAsString();
+  finally
+    LFormData.Free;
+  end;
+end;

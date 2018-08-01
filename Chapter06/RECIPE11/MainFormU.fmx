@@ -1,0 +1,140 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Accessing HTTPS services with Native HTTP(S) Client'
+  ClientHeight = 480
+  ClientWidth = 651
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object GridPanelLayout1: TGridPanelLayout
+    Align = Top
+    Size.Width = 651.000000000000000000
+    Size.Height = 306.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ColumnCollection = <
+      item
+        Value = 50.000000000000000000
+      end
+      item
+        Value = 50.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = btnGet
+        Row = 0
+      end
+      item
+        Column = 1
+        Control = btnPost
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = EditGithubUser
+        Row = 1
+      end
+      item
+        Column = 1
+        Control = btnGithub
+        Row = 1
+      end>
+    RowCollection = <
+      item
+        Value = 50.393700787401580000
+      end
+      item
+        Value = 49.606299212598430000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object btnGet: TButton
+      Align = Client
+      Margins.Left = 20.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 20.000000000000000000
+      Margins.Bottom = 20.000000000000000000
+      Size.Width = 285.500000000000000000
+      Size.Height = 114.204727172851600000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Send GET request to an HTTPS server'
+      TextSettings.WordWrap = True
+      OnClick = btnGetClick
+    end
+    object btnPost: TButton
+      Align = Client
+      Margins.Left = 20.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 20.000000000000000000
+      Margins.Bottom = 20.000000000000000000
+      Size.Width = 285.500000000000000000
+      Size.Height = 114.204727172851600000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Send POST request with parameters to an HTTPS server'
+      TextSettings.WordWrap = True
+      OnClick = btnPostClick
+    end
+    object EditGithubUser: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = VertCenter
+      TabOrder = 3
+      Text = 'danieleteti'
+      Position.X = 10.000000000000000000
+      Position.Y = 218.204727172851600000
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 305.500000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Please, insert a github username'
+    end
+    object btnGithub: TButton
+      Align = Client
+      Margins.Left = 20.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 20.000000000000000000
+      Margins.Bottom = 20.000000000000000000
+      Size.Width = 285.500000000000000000
+      Size.Height = 111.795272827148400000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'GET github profile'
+      TextSettings.WordWrap = True
+      OnClick = btnGithubClick
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 651.000000000000000000
+    Size.Height = 174.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object mmResponse: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      ReadOnly = True
+      StyledSettings = [Size, Style, FontColor]
+      TextSettings.Font.Family = 'Consolas'
+      TextSettings.WordWrap = True
+      Align = Client
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Size.Width = 631.000000000000000000
+      Size.Height = 154.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Viewport.Width = 627.000000000000000000
+      Viewport.Height = 150.000000000000000000
+    end
+  end
+end

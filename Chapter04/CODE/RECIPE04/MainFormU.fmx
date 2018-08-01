@@ -1,0 +1,224 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'LiveBindings with Master/Details'
+  ClientHeight = 388
+  ClientWidth = 620
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object grdPeople: TGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 361.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    RowHeight = 21.000000000000000000
+    RowCount = 200
+    Options = [AlternatingRowBackground, Editing, ColumnResize, ColumnMove, ColLines, RowLines, RowSelect, Tabs, Header, HeaderClick]
+    Viewport.Width = 341.000000000000000000
+    Viewport.Height = 232.000000000000000000
+  end
+  object grdEmails: TGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 384.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 193.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    RowHeight = 21.000000000000000000
+    RowCount = 200
+    Options = [AlternatingRowBackground, Editing, ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick]
+    Viewport.Width = 205.000000000000000000
+    Viewport.Height = 168.000000000000000000
+  end
+  object BindNavigator1: TBindNavigator
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 360.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    DataSource = bsPeople
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+  end
+  object EditFirstName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Text = 'Mark Anderson'
+    Position.X = 8.000000000000000000
+    Position.Y = 344.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object EditLastName: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Text = 'Mark Anderson'
+    Position.X = 128.000000000000000000
+    Position.Y = 344.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object EditAge: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    Text = '67'
+    Position.X = 256.000000000000000000
+    Position.Y = 344.000000000000000000
+    Size.Width = 33.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 327.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'First name'
+  end
+  object Label2: TLabel
+    Position.X = 128.000000000000000000
+    Position.Y = 327.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Last name'
+  end
+  object Label3: TLabel
+    Position.X = 256.000000000000000000
+    Position.Y = 327.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Age'
+  end
+  object bnEmails: TBindNavigator
+    Position.X = 459.000000000000000000
+    Position.Y = 256.000000000000000000
+    Size.Width = 150.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    DataSource = bsEmails
+    VisibleButtons = [nbInsert, nbDelete]
+    xRadius = 4.000000000000000000
+    yRadius = 4.000000000000000000
+    BeforeAction = bnEmailsBeforeAction
+  end
+  object bsPeople: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'FirstName'
+        Generator = 'ContactNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'LastName'
+        Generator = 'ContactNames'
+        ReadOnly = False
+      end
+      item
+        Name = 'Age'
+        FieldType = ftUInteger
+        Generator = 'UIntegers'
+        ReadOnly = False
+      end
+      item
+        Name = 'EmailsCount'
+        FieldType = ftUInteger
+        Generator = 'UIntegers'
+        ReadOnly = True
+      end>
+    ScopeMappings = <>
+    OnCreateAdapter = bsPeopleCreateAdapter
+    Left = 88
+    Top = 120
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 404
+    Top = 325
+    object LinkGridToDataSourcebsPeople: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = bsPeople
+      GridControl = grdPeople
+      Columns = <
+        item
+          MemberName = 'FirstName'
+          Width = 120
+        end
+        item
+          MemberName = 'LastName'
+          Width = 120
+        end
+        item
+          MemberName = 'Age'
+          Width = 40
+        end
+        item
+          MemberName = 'EmailsCount'
+          Header = '#Emails'
+          Width = 50
+        end>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsPeople
+      FieldName = 'FirstName'
+      Control = EditFirstName
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsPeople
+      FieldName = 'LastName'
+      Control = EditLastName
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = bsPeople
+      FieldName = 'Age'
+      Control = EditAge
+      Track = False
+    end
+    object LinkGridToDataSourcebsEmails: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = bsEmails
+      GridControl = grdEmails
+      Columns = <
+        item
+          MemberName = 'Address'
+          Width = 200
+        end>
+    end
+  end
+  object bsEmails: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'Address'
+        Generator = 'ColorsNames'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    OnCreateAdapter = bsEmailsCreateAdapter
+    Left = 536
+    Top = 136
+  end
+end

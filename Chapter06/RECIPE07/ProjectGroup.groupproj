@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{488ABA2B-22AD-428E-B490-7E36A7F2C913}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ClientDBApplication\ClientDBApplication.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ConfigDispatch\ConfigDispatcher.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ClientDBApplication">
+        <MSBuild Projects="ClientDBApplication\ClientDBApplication.dproj"/>
+    </Target>
+    <Target Name="ClientDBApplication:Clean">
+        <MSBuild Projects="ClientDBApplication\ClientDBApplication.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClientDBApplication:Make">
+        <MSBuild Projects="ClientDBApplication\ClientDBApplication.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ConfigDispatcher">
+        <MSBuild Projects="ConfigDispatch\ConfigDispatcher.dproj"/>
+    </Target>
+    <Target Name="ConfigDispatcher:Clean">
+        <MSBuild Projects="ConfigDispatch\ConfigDispatcher.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ConfigDispatcher:Make">
+        <MSBuild Projects="ConfigDispatch\ConfigDispatcher.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ClientDBApplication;ConfigDispatcher"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ClientDBApplication:Clean;ConfigDispatcher:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ClientDBApplication:Make;ConfigDispatcher:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

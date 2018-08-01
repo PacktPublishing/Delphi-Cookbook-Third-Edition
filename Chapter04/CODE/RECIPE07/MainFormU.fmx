@@ -1,0 +1,74 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'FireMonkey Pie Chart'
+  ClientHeight = 355
+  ClientWidth = 547
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object lytPie: TLayout
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 232.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 300.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object btnRefreshPie: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 280.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Refresh Pie Chart'
+    OnClick = btnRefreshPieClick
+  end
+  object lblCompany: TLabel
+    Anchors = [akLeft, akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 232.000000000000000000
+    Position.Y = 320.000000000000000000
+    Size.Width = 297.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 22.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'lblCompany'
+  end
+  object sgData: TStringGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 16.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 193.000000000000000000
+    Size.Height = 257.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    RowHeight = 21.000000000000000000
+    Viewport.Width = 173.000000000000000000
+    Viewport.Height = 232.000000000000000000
+    object StringColumn3: TStringColumn
+      Header = 'Companies'
+    end
+    object StringColumn4: TStringColumn
+      Header = 'Units Sold'
+      Size.Width = 69.000000000000000000
+    end
+  end
+  object btnAddRow: TButton
+    Position.X = 136.000000000000000000
+    Position.Y = 280.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Add Row'
+    OnClick = btnAddRowClick
+  end
+end

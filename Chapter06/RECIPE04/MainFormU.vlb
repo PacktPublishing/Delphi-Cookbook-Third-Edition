@@ -1,0 +1,15 @@
+﻿[Memo1]
+Coordinates=67,10,53,51
+
+[Panel2]
+Coordinates=10,10,47,51
+
+[Panel1]
+Coordinates=10,71,47,51
+
+[]
+Coordinates=130,10,46,51
+
+[btnListToJSONArray]
+Coordinates=186,10,53,51
+

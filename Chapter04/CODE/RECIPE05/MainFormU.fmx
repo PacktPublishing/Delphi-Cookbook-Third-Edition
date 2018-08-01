@@ -1,0 +1,72 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Measurer with TPath'
+  ClientHeight = 376
+  ClientWidth = 569
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Position.X = 12.000000000000000000
+    Position.Y = 12.000000000000000000
+    Size.Width = 417.000000000000000000
+    Size.Height = 193.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object PathValues: TPath
+      Align = Client
+      Size.Width = 417.000000000000000000
+      Size.Height = 193.000000000000000000
+      Size.PlatformDefault = False
+      object PathAxis: TPath
+        Align = Contents
+        Fill.Kind = None
+        HitTest = False
+        Size.Width = 417.000000000000000000
+        Size.Height = 193.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claGray
+        Stroke.Thickness = 0.500000000000000000
+        Stroke.Dash = Dash
+      end
+    end
+  end
+  object Panel2: TPanel
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 12.000000000000000000
+    Position.Y = 212.000000000000000000
+    Size.Width = 545.000000000000000000
+    Size.Height = 147.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object PathValues2: TPath
+      Align = Client
+      Fill.Color = x9FFF0000
+      HitTest = False
+      Size.Width = 545.000000000000000000
+      Size.Height = 147.000000000000000000
+      Size.PlatformDefault = False
+      object PathAxis2: TPath
+        Align = Contents
+        Fill.Kind = None
+        HitTest = False
+        Size.Width = 545.000000000000000000
+        Size.Height = 147.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claGray
+        Stroke.Thickness = 0.500000000000000000
+        Stroke.Dash = Dash
+      end
+    end
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 456
+    Top = 16
+  end
+end
