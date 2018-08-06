@@ -45,8 +45,8 @@ With the following software and hardware list you can run all code files present
 ### Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
-| 1-5 | Delphi 10.2 Tokyo Community Edition or higher | Windows, Mac OS X, and Linux (Any) |
-| 6-7 | Delphi 10.2 Tokyo Enterprise Edition or higher | Windows, Mac OS X, and Linux (Any) |
+| 1-5 | Delphi 10.2 Tokyo Community Edition or higher | Windows, Mac OS X |
+| 6-7 | Delphi 10.2 Tokyo Enterprise Edition or higher | Windows, Mac OS X, and Linux (Chapter 7) |
 
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/DelphiCookbookThirdEdition_ColorImages.pdf).
