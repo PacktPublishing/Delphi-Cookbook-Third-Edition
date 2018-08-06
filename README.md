@@ -15,9 +15,9 @@ This book covers the following exciting features:
 * Deploy LiveBinding effectively with the right object-oriented programming (OOP) approach 
 * Create RESTful web services that run on Linux or Windows 
 * Build mobile apps that read data from a remote server efficiently 
-* Call platform native API on Android and iOS for an unpublished API 
-Manage software customization by making better use of an extended RTTI 
-Integrate your application with IOT 
+* Call platform native API on Android and iOS for an unpublished API
+* Manage software customization by making better use of an extended RTTI 
+* Integrate your application with IOT 
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1-788-62130-1) today!
 
