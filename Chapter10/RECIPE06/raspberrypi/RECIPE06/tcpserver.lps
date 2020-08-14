@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="tcpserver.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="13"/>
+        <UsageCount Value="24"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="ServerU.pas"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="90"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="rpi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../commons/rpi.pas"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="27" Y="6"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../synapse40/source/lib/nntpsend.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/fpc/3.0.0/rtl/inc/objpash.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="179"/>
+        <CursorPos X="22" Y="195"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/usr/fpc/3.0.0/rtl/inc/objpas.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="279"/>
+        <CursorPos X="9" Y="281"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="workerthreadu.pas"/>
+        <UnitName Value="WorkerThreadU"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="83" Y="30"/>
+        <UsageCount Value="21"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="15" HistoryIndex="14">
+      <Position1>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="12" Column="12"/>
+      </Position1>
+      <Position2>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="114" Column="27" TopLine="82"/>
+      </Position2>
+      <Position3>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="19" TopLine="4"/>
+      </Position3>
+      <Position4>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="20" TopLine="4"/>
+      </Position4>
+      <Position5>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="21" TopLine="4"/>
+      </Position5>
+      <Position6>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="22" TopLine="4"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="23" TopLine="4"/>
+      </Position7>
+      <Position8>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="25" TopLine="4"/>
+      </Position8>
+      <Position9>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="26" TopLine="4"/>
+      </Position9>
+      <Position10>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="27" TopLine="4"/>
+      </Position10>
+      <Position11>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="28" TopLine="4"/>
+      </Position11>
+      <Position12>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="30" TopLine="4"/>
+      </Position12>
+      <Position13>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="20" TopLine="4"/>
+      </Position13>
+      <Position14>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="20" TopLine="4"/>
+      </Position14>
+      <Position15>
+        <Filename Value="ServerU.pas"/>
+        <Caret Line="19" Column="29" TopLine="10"/>
+      </Position15>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="2">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="workerthreadu.pas"/>
+        <Line Value="31"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="ServerU.pas"/>
+        <Line Value="19"/>
+      </Item2>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

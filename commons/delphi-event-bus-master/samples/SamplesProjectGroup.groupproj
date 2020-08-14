@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{06B0EBCF-260A-4992-A219-B700B373FA10}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="vclmessaging\VCLMessaging.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AccessRemoteData\AccessRemoteData.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WeatherStation\WeatherStation.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Analytics\Analytics.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VCLMessaging">
+        <MSBuild Projects="vclmessaging\VCLMessaging.dproj"/>
+    </Target>
+    <Target Name="VCLMessaging:Clean">
+        <MSBuild Projects="vclmessaging\VCLMessaging.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VCLMessaging:Make">
+        <MSBuild Projects="vclmessaging\VCLMessaging.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AccessRemoteData">
+        <MSBuild Projects="AccessRemoteData\AccessRemoteData.dproj"/>
+    </Target>
+    <Target Name="AccessRemoteData:Clean">
+        <MSBuild Projects="AccessRemoteData\AccessRemoteData.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AccessRemoteData:Make">
+        <MSBuild Projects="AccessRemoteData\AccessRemoteData.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WeatherStation">
+        <MSBuild Projects="WeatherStation\WeatherStation.dproj"/>
+    </Target>
+    <Target Name="WeatherStation:Clean">
+        <MSBuild Projects="WeatherStation\WeatherStation.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WeatherStation:Make">
+        <MSBuild Projects="WeatherStation\WeatherStation.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Analytics">
+        <MSBuild Projects="Analytics\Analytics.dproj"/>
+    </Target>
+    <Target Name="Analytics:Clean">
+        <MSBuild Projects="Analytics\Analytics.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Analytics:Make">
+        <MSBuild Projects="Analytics\Analytics.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VCLMessaging;AccessRemoteData;WeatherStation;Analytics"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VCLMessaging:Clean;AccessRemoteData:Clean;WeatherStation:Clean;Analytics:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VCLMessaging:Make;AccessRemoteData:Make;WeatherStation:Make;Analytics:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

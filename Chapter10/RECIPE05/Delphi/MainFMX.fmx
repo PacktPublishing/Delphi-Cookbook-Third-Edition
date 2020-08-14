@@ -1,0 +1,86 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Raspberry PI Multiple Relais'
+  ClientHeight = 448
+  ClientWidth = 571
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lightBulb1Switch: TSwitch
+    IsChecked = False
+    Position.X = 40.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnSwitch = lightBulb1SwitchSwitch
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 571.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Label2: TLabel
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 571.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 25.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'Raspberry PI Multiple Relays'
+      TabOrder = 0
+    end
+  end
+  object lighBulb1Label: TLabel
+    AutoSize = True
+    StyledSettings = [Family, Style]
+    Position.X = 8.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 54.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 40.000000000000000000
+    TextSettings.FontColor = claRed
+    Text = 'LIGHT BULB 1'
+    TabOrder = 4
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Bottom
+    Position.Y = 232.000000000000000000
+    Size.Width = 571.000000000000000000
+    Size.Height = 216.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Viewport.Width = 567.000000000000000000
+    Viewport.Height = 212.000000000000000000
+  end
+  object lightBulb2Switch: TSwitch
+    IsChecked = False
+    Position.X = 344.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 177.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    OnSwitch = lightBulb2SwitchSwitch
+  end
+  object lightBulb2Label: TLabel
+    AutoSize = True
+    StyledSettings = [Family, Style]
+    Position.X = 312.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 54.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 40.000000000000000000
+    TextSettings.FontColor = claGreen
+    Text = 'LIGHT BULB 2'
+    TabOrder = 3
+  end
+end

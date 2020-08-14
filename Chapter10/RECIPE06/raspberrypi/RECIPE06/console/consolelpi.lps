@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="consolelpi.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos Y="14"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="../../commons/rpi.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../rpi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="14" HistoryIndex="13">
+      <Position1>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="14" Column="13"/>
+      </Position1>
+      <Position2>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="9" Column="15"/>
+      </Position2>
+      <Position3>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="11" Column="63"/>
+      </Position3>
+      <Position4>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="13" Column="15"/>
+      </Position4>
+      <Position5>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="15" TopLine="9"/>
+      </Position5>
+      <Position6>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="17" TopLine="9"/>
+      </Position6>
+      <Position7>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="18" TopLine="9"/>
+      </Position7>
+      <Position8>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="19" TopLine="9"/>
+      </Position8>
+      <Position9>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="20" TopLine="9"/>
+      </Position9>
+      <Position10>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="27" TopLine="9"/>
+      </Position10>
+      <Position11>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="30" TopLine="9"/>
+      </Position11>
+      <Position12>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="31" TopLine="9"/>
+      </Position12>
+      <Position13>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="26" TopLine="8"/>
+      </Position13>
+      <Position14>
+        <Filename Value="consolelpi.lpr"/>
+        <Caret Line="7" Column="8"/>
+      </Position14>
+    </JumpHistory>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="consolelpi.lpr"/>
+        <Line Value="14"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
